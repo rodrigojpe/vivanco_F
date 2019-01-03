@@ -8,12 +8,7 @@ const jwt = require('../services/jwt');
 var fs = require('fs');
 const userCtrl = {};
 
-userCtrl.pruebas = async(req , res) =>{
-await  res.status(200).send({
-    message:'probando  el controller user',
-    user: req.user
-  });
-}
+
 
 userCtrl.createUser = function (req , res){
   console.log('entrendo al create user');
