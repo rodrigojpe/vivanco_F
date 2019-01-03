@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon run server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.2.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "http-errors": "^1.7.0",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^8.3.0",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.9",
+    "mongoose-pagination": "^1.0.0",
+    "morgan": "^1.9.0",
+    "multiparty": "^4.2.1",
+    "nodemailer": "^4.7.0",
+    "path": "^0.12.7",
+    "split": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}

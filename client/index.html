@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- <link rel="stylesheet" href="asset/alert/sweetalert2.min.css"> -->
+  <!-- <link rel="stylesheet" href="node_modules/sweetalert/dist/sweetalert.css"> -->
+
+      <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <title>VivancoBand</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" class="icon" href="../assets/img/favicon-band.png">
+<link rel="stylesheet" href="styles.061529b0f30c0fd3153e.css"></head>
+<body class="color style=background-color:#f6f6f6">
+  <app-root></app-root>
+  <script type="text/javascript"  src="assets/instafeed.js"></script>
+  <script type="text/javascript"  src="assets/instafeed.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script> -->
+
+  <script type="text/javascript" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1"></script>
+  <script type="text/javascript" src="assets/alert/sweetalert2.min.js"></script>
+
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.e3633a42d1123afc5fc9.js"></script><script type="text/javascript" src="scripts.a5cf672fd3200f219b18.js"></script><script type="text/javascript" src="main.b986ab9549b7957bf788.js"></script></body>
+
+
+<script type="text/javascript">
+
+// document.addEventListener('DOMContentLoaded', function() {
+// var elems = document.querySelectorAll('.sidenav');
+// var instances = M.Sidenav.init(elems, options);
+// });
+
+function closeModal(){
+  alert('hola mundo');
+  // $('#modal1').closeModal();
+}
+
+
+$(document).ready(function(){
+   $('.sidenav').sidenav();
+   $('select').formSelect();
+ console.log("entro");
+
+  $('.datepicker').datepicker({
+            firstDay: true,
+            format: 'yyyy/mm/dd',
+            i18n: {
+                months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
+                weekdays: ["Domingo","Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+                weekdaysShort: ["Dom","Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+                weekdaysAbbrev: ["D","L", "M", "M", "J", "V", "S"]
+            }
+        });
+
+});
+
+
+
+//  $(document).ready(function(){
+// $('#image1').parallax();
+//
+// });
+ // var Instafeed = require("instafeed.js");
+
+var userFeed = new Instafeed({
+ get: 'user',
+ userId: '1086022888', //'number you get from here: https://smashballoon.com/instagram-feed/find-instagram-user-id/ or the first group of numbers in the access token, until the period ',
+ clientId: '26ef4eef85b34b6da3f775858e3fe2b4',//'acces token you get form registering the app with instagram',
+ accessToken:'1086022888.1677ed0.a16cfd0e0f8c40409524f4ebf8a6205d',
+ resolution: 'low_resolution',
+ template: '<a href="{{link}}" id="{{id}}"> <p>{{caption}} </p> <img src="{{image}}"/><span>{{likes}} - {{comments}}</span></a>',
+ sortBy: 'none',
+ limit: 4,
+ tagName:'tagged',
+ links: true
+});
+if ($('#instafeed').length) {
+    userFeed.run();
+}
+
+
+
+</script>
+</html>
