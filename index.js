@@ -5,7 +5,7 @@ var port = process.env.PORT || 3789;
 mongoose.Promise = global.Promise;
 
 // mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/vivanco', { useNewUrlParser: true  })
+mongoose.connect('mongodb://104.248.235.159:27017/vivanco', { useNewUrlParser: true  })
   .then(() =>{
     console.log('la conexion con vivancoBand se establecio correctamente...');
     app.listen(port , () =>{
