@@ -84,7 +84,7 @@ if (user.password) {
       // res.json('receved');
   }
 
-  userCtrl.login = async (req, res) =>{
+  userCtrl.login = async(req, res) =>{
   var params = req.body;
   var email = params.email;
   var tok;
