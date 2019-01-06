@@ -107,7 +107,7 @@ if (user.password) {
               if (check) {
                 if (params.gettoken) {
                   // devuelve el token
-                  
+
                     console.log(user);
 
                   res.status(200).send({
@@ -144,8 +144,9 @@ userCtrl.uploadImage = async(req, res ) =>{
 var userID = req.params.id;
 var file_name = "no subido..";
 
-// console.log(userID);
-// return;
+console.log('llego al metodo subir imagen');
+ console.log(userID);
+
 
  if  (req.files) {
     var file_path =  req.files.image.path;
@@ -155,7 +156,7 @@ var file_name = "no subido..";
     // var file_name1 = file_split[2];
  //
     var file_name = nombre;
-
+    // console.log(file_name);return;
     // var ext_split = file_name1.split('\.');
      var file_ext = path.extname(file_name);
 
@@ -209,6 +210,8 @@ console.log(file_split);
 
 
 userCtrl.getImagen = async(req,res) =>{
+  console.log('mostrando imagen');
+  console.log(req.params.imageFile);
   var imageFile= req.params.imageFile;
   var path_file = './uploads/users/'+imageFile;
   fs.exists(path_file, (exists)=>{
@@ -226,6 +229,9 @@ userCtrl.updateUser = async(req, res) =>{
   var userId = req.params.id;
   var update = req.body;
   delete update.password;
+
+  //  console.log(req.user.sub);
+  // return;
 
   if (userId != req.user.sub) {
     return  res.status(500).send({ message: 'no tiens permiso para actualizar el usuario'  });

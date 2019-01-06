@@ -15,9 +15,9 @@ let  md_upload = multipart({uploadDir: './uploads/users'});
 api.get('/pruebas', UserController.pruebas);
 api.post('/create', UserController.createUser);
 api.post('/login', UserController.login);
-api.put('/update-user/:id',  UserController.updateUser);
+api.put('/update-user/:id', [md_auth.ensureAuth, md_upload], UserController.updateUser);
 api.post('/upload-img/:id', [md_auth.ensureAuth, md_upload], UserController.uploadImage);
-api.get('/get-image-file/:imageFile',UserController.getImagen);
+api.get('/get-image-file/:imageFile', UserController.getImagen);
 
 
 module.exports = api;
