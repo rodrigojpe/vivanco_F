@@ -14,7 +14,7 @@ exports.ensureAuth = function(req, res , next){
 
   try {
     var payload = jwt.decode(token, clave);
-        console.log(payload);
+        // console.log(payload);
         // console.log(moment().format('LT'));
 
     // if (payload.exp <= momnet().unix()) {

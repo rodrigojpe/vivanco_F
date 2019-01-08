@@ -149,7 +149,7 @@ var file_name = "no subido..";
      var file_name1 = file_split[1];
      console.log(nombre);
      console.log(file_name1);
-
+return;
 
  //
     // var file_name = nombre;
