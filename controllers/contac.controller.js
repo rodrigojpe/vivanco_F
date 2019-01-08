@@ -1,4 +1,7 @@
 'use strict';
+const nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+
 var Contact = require('../models/contact');
 const contactCtrl = {};
 
@@ -8,68 +11,11 @@ var express = require('express');
 var app = express();
 // var express = require('express');
 var router = express.Router();
-// var mailer = require('express-mailer');
- // app.use('/static', express.static(__dirname + '/public/img'));
 
-//
-// mailer.extend(app, {
-//   from: 'no-reply@example.com',
-//   host: 'smtp.gmail.com', // hostname
-//   secureConnection: true, // use SSL
-//   port: 465, // port for secure SMTP
-//   transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts
-//   auth: {
-//     user: 'academiacp@gmail.com',
-//     pass: 'martinrodrigo1'
-//   }
-// });
-//
-// app.set('views',  'views');
-// app.set('view engine', 'jade');
-//
-//
-//
-// contactCtrl.sendMail = async (req, res) => {
-//
-// var dir = require('path').join(__dirname,'./public/img/logo_mv_or4.jpg');
-//
-//  var direc =  app.use(express.static(__dirname + './public/img'));
-//
-//    // console.log(app.use('/static', express.static(__dirname + '/public')));
-//    // console.log(dir);
-//   console.log(dir);
-//
-
-//
-//   // console.log(contact);
-//   await app.mailer.send('email', {
-//     to: 'academiacp@gmail.com', // REQUIRED. This can be a comma delimited string just like a normal email to field.
-//     subject: 'Solicitud Información Banda Vivanco', // REQUIRED.
-//     otherProperty: contact, // All additional properties are also passed to the template as local variables.
-//     name: req.body.name,
-//     email: req.body.email,
-//     mensaje: req.body.message,
-//     phono: req.body.phone,
-//     image: dir
-//   }, function (err, message) {
-//     if (err) {
-//
-//       res.send(err);
-//       return;
-//     }
-//
-//      res.status(200).send({ contact: JSON.stringify(contact) });
-//     // res.json({ user: 'tobi' });
-//      // res.render('../views/email.jade', {param: JSON.stringify(contact)});
-//      // console.log(param);
-//   });
-// };
-const nodemailer = require('nodemailer');
 
 contactCtrl.sendMail = async (req, res) => {
 // Generate test SMTP service account from ethereal.email
-// Only needed if you don't have a real mail account for testing
-  //
+
 
   var contact = new Contact({
     name : req.body.name,
@@ -86,7 +32,7 @@ contactCtrl.sendMail = async (req, res) => {
   }
   let option = {
     pool: true,
-    host: 'smtp-relay.gmail.com',
+    host: 'smtp.gmail.com',
     port: 465,
     secure: true, // use TLS
     auth: {
@@ -95,14 +41,13 @@ contactCtrl.sendMail = async (req, res) => {
     }
   }
 
- let transporter = nodemailer.createTransport({
-
+ let transporter = nodemailer.createTransport(smtpTransport({
    service: 'Gmail',
    auth:{
      user: acount.user,
      pass: acount.pass
    }
- });
+ }));
 
 
 console.log('sen email');
@@ -125,14 +70,7 @@ console.log('sen email');
                 cid:"logo"
               },
             ]
-
     };
-        // var attachments = [{
-        //   filename : 'logo_mv_or4.jpg',
-        //   contents:IMAGE_CONTENTS,
-        //   cid:img
-        // }]
-
 
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
@@ -150,8 +88,6 @@ console.log('sen email');
         // Preview only available when sending through an Ethereal account
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
     });
 
 };
