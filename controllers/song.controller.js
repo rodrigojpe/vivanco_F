@@ -135,10 +135,8 @@ cancionCtrl.uploadSongFile = async(req, res ) =>{
 var songID = req.params.id;
 var file_name = "no subido..";
  //
- // console.log(req.params);
+  console.log(req.params);
   console.log(songID);
- //
- // return;
 
  if  (req.files) {
     var file_path =  req.files.file.path;
@@ -149,9 +147,7 @@ var file_name = "no subido..";
      var file_name1 = file_split[1];
      console.log(nombre);
      console.log(file_name1);
-return;
 
- //
     // var file_name = nombre;
     // console.log(file_name);
     // return;
