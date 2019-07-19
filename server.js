@@ -1,4 +1,4 @@
- 'use strict'
+'use strict'
 
 var express = require('express');
 
@@ -16,33 +16,45 @@ var contact = require('./routes/contact');
 // app.use('/static', express.static(__dirname + './public/img'));
 
 
+
+// configurar cabeceras y cors
+// app.use((req, res, next)=>{
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+//     res.header('Access-Control-Allow-Methods','GET, POST, OPTIONS, PUT, DELETE');
+//     res.header('Allow','GET, POST, OPTIONS, PUT, DELETE');
+//     next();
+// });
+
+var cors = require('cors');
+
+
+app.use(cors());
+
+app.get('/', function(req, res, next) {
+   res.json({ msg: 'This is CORS-enabled for all origins!' });
+});
+app.head('/', function(req, res, next) {
+   res.json({ msg: 'This is CORS-enabled for all origins!' });
+});
+app.post('/', function(req, res, next) {
+   res.json({ msg: 'This is CORS-enabled for all origins!' });
+});
+app.put('/', function(req, res, next) {
+   res.json({ msg: 'This is CORS-enabled for all origins!' });
+});
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
-// configurar cabeceras y cors
-app.use((req, res, next)=>{
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
-    res.header('Access-Control-Allow-Methods','GET, POST, OPTIONS, PUT, DELETE');
-    res.header('Allow','GET, POST, OPTIONS, PUT, DELETE');
-    next();
-
-});
-
 // rutas
 // app.use('/', contactRouter);
-app.use('/' ,express.static('client', {redirect:false}));
+app.use(express.static(path.join('vivancoBand')));
 app.use('/', user_router);
 app.use('/', album_router);
 app.use('/', song_router);
 app.use('/', artist_route);
 app.use('/', contact);
-
-
-
-app.get('*', function(req , res , next){
-    res.sendFile(path.resolve('client/index.html'));
-})
 
 
 
