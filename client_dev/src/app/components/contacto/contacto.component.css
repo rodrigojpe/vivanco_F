@@ -1,0 +1,22 @@
+img{
+  height: 31rem;
+}
+.transport{
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.modal {
+  width: 10% !important;
+  background-color: rgba(0,0,0,0.5) !important;
+}
+.preloader-wrapper{
+  margin-left: 12px;
+}
+.section{
+  background-color: #ee6e73;
+  margin-top: 3rem;
+}
+

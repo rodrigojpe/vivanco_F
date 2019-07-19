@@ -1,0 +1,50 @@
+nav{
+  padding-top:5px;
+  padding-bottom: 65px;
+}
+
+
+li a:hover{
+  background-color: #212121;
+  color:#fff;
+}
+
+img {
+  padding-top: 3px;
+  height: 60px;
+}
+/*
+.color{
+  color:black;
+  padding-top: 0.5rem;
+  font-style: italic;
+} */
+
+/* .icon{
+  left:-10px !important;
+
+}
+
+.home{
+  margin-top: 3.4rem;
+}
+.img-prin{
+  padding-top: 100px;
+  max-width:  110% !important;
+  min-height: 101% !important;
+
+} */
+
+.select-wrapper {
+  width: 80%;
+  color :white;
+  /* background-color: red; */
+  border-bottom:0px !important;
+  margin-left: 2rem;
+}
+
+.li{
+  color: red !important;
+  background-color: white !important;
+  padding-top: 10px !important;
+}

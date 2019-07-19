@@ -1,0 +1,36 @@
+.margen{
+  margin-left: 27rem !important;
+}
+
+.img-bacground {
+  padding-top: 6rem;
+  background-image: url('https://files.greatermedia.com/uploads/sites/21/2016/01/concert-audience.jpg');
+  background-size: 100% 100%;
+  /* background-color: black; */
+  flex: auto;
+  display: flex;
+  margin: 0 auto;
+}
+.input-field{
+  opacity: 0.6;
+}
+
+span{
+  color:red;
+  font-family: cursive;
+}
+.titulo{
+  color:black;
+  font-size: 2.5rem;
+  text-align:  center;
+}
+
+.center{
+  /* background-color: #eeeeee; */
+
+  background-color: rgb(0,0,0);
+  opacity: 0.8;
+}
+form{
+  margin-top: 2rem;
+}

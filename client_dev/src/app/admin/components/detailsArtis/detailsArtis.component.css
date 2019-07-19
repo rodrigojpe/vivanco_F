@@ -1,0 +1,25 @@
+.card-sub{
+  width: 5rem;
+  height: 19%;
+}
+.btn_delete{
+  margin-left: 1rem!important;
+}
+.artists{
+  width: 20rem !important;
+  height: 54rem !important;
+}
+.card-panel{
+  width: 17rem;
+   height: 18rem;
+   
+
+}
+.margen{
+  margin-right: 6rem !important;
+}
+.img_artis{
+  margin-top: 4px;
+  width: 100%;
+  height: 100px;
+}

@@ -1,0 +1,19 @@
+.videos{
+  margin-left: 17px;
+  /* background-color: #ee6e73; */
+  margin-top: 0;
+}
+
+.midiv{
+  background-color: #ee6e73;
+  margin-top: 0;
+  height: 100%;
+  margin-left: -22px;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+}
+h4{
+  background-color: #ee6e73;
+  margin-top: 0;
+}

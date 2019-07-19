@@ -1,0 +1,24 @@
+  <div class="row col l12">
+    <div class="col l12">
+        <div class="col  l2 m2 s2 responsive-img">
+            <div *ngIf="song.album">
+                <img class="responsive-img" id="play-image-album" src="{{url + 'upload-img-album/' + album.image}}"  />
+            </div>
+            <div *ngIf="!song.album">
+                <img class="responsive-img" id="play-image-album" src="assets/img/default3.jpeg"   />
+            </div>
+        </div>
+        <div class="col l2 color-song artist">
+          <div class="color-song col l6">Cancion:</div>
+          <div class="color-song-det col l5" id="nombre-song"></div>
+          <div class="color-song col l6">Artista:</div>
+          <div class="color-song-det col l4" id="artist-song"></div>
+
+        </div>
+      <div class="audio-file col l8 s12 m8 left-align" >
+          <audio class="audio_file col l12 m12 s12 left-align" id="player" controls controlsList="nodownload" height="32" *ngIf="song && song.file != 'null'"  >
+              <source id="mp3-source" src="{{ url + 'get-song-file/'  + song?.file}}" type="audio/mpeg"/>
+          </audio>
+      </div>
+    </div>
+  </div>

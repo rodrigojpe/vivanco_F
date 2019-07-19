@@ -1,0 +1,93 @@
+.home{
+  margin-top: 3.4rem;
+}
+
+
+
+
+.facewall{
+  padding: 0 0 0 0;
+}
+.img-bacground {
+  background-image: url('/assets/img/background.jpg');
+  background-size: 100% 100%;
+  display: block !important;
+
+}
+
+.musicians {
+  padding-top: 0px;
+}
+ /* .parallax img {   display: inherit !important; } */
+
+ .instafeed{
+   float: right;
+   flex: auto;
+   align-items: center;
+   justify-content: center;
+   margin-top: 1px;
+   /* margin-left: 10px !important; */
+ }
+ .ex1 {
+     background-color: lightblue;
+     height: 500px;
+     width: 300px;
+     overflow-y: scroll;
+
+ }
+
+ 
+ .img{
+   padding-top: 8rem !important;
+   height: 800px;
+ }
+
+  .parallax-container{
+    position: relative !important;
+    overflow: hidden !important; 
+    overflow: unset !important;
+    width: 100% !important;
+    height: 550px !important;
+    margin-top: -1;
+  }
+
+
+/* .parallax {
+  z-index: 0;
+  display: block !important;
+
+} */
+
+
+ .card-image .card-title {
+  color:#ee6e73 !important;
+  /* background-color: inherit; */
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .insta{
+  margin-top: 20px;
+}
+
+.row{
+  align-items: center;
+  flex: auto;
+  justify-content: center;
+}
+
+.Facebook{
+  margin-left: -10px;
+  margin-bottom: 25px;
+  background-color: inherit;
+}
+
+.card .card-image .card-title {
+    color: #ee6e73 !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 24px;
+}

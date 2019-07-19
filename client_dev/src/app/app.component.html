@@ -1,0 +1,81 @@
+<!-- <app-navbar></app-navbar> -->
+  <nav class="black navbar-fixed">
+      <div class="nav-wrapper black col m12 s12 navbar-fixed">
+        <a  class="brand-logo">   <img src="assets/img/logo.jpg"  class="responsive-img logo"  alt=""></a>
+        <a href="#!"   data-target="mobile-demo" class="sidenav-trigger sidenav-close"><i class="material-icons">dehaze</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li routerLinkActive="active"><a  href="home" >Inicio</a></li>
+          <!-- <li routerLinkActive="active"><a [routerLink]="['home']">inicio</a></li> -->
+          <li routerLinkActive="active"><a [routerLink]="['we']">Nosotros</a></li>
+          <li routerLinkActive="active"><a [routerLink]="['fotos']">Fotografias</a></li>
+          <li routerLinkActive="active"><a [routerLink]="['contacto']" >Contactanos</a></li>
+          <!-- <li routerLinkActive="active"><a [routerLink]="['manager']" >Manager</a></li> -->
+          <li routerLinkActive="active"><a [routerLink]="['songs/','5be5c8bf1c218d2f5d3ecd11']" >Musica</a></li>
+          <!-- <li routerLinkActive="active"><a [routerLink]="['movies']" >Videos</a></li> -->
+          <li routerLinkActive="active" *ngIf="!identity" ><a [routerLink]="['login']" >Login</a></li>
+          <li>
+              <div class="col s4 m4 img" *ngIf="identity">
+                <img src="{{url + 'get-image-file/' + identity?.image }}" class="img-navBar responsive-img"/>
+
+              </div>
+          </li>
+          <li >
+                  <a   class='dropdown-trigger btn' href='#' data-target='dropdown1'>{{identity?.name}}</a>
+          </li>
+
+
+
+          <!-- <li *ngIf="identity" class="session">
+              <div class="identity">
+                  <b>  {{identity.name}}</b>
+                  <li routerLinkActive="active"><a *ngIf="identity" href='#!'  [routerLink]="['/admin-panel']"><i class="material-icons">backup</i></a></li>
+                  <li><a class="dropdown-item" href='#!'  [routerLink]="['/mis-datos']"><i class="material-icons">account_box</i></a></li>
+                  <li><a (click)="logout()" href='#!'  ><i class="material-icons">exit_to_app</i></a></li>
+              </div>
+           </li> -->
+        </ul>
+        <!-- <div class="admin"> -->
+
+        <!-- </div> -->
+
+      </div>
+
+    </nav>
+
+         <ul id='dropdown1'  class='dropdown-content'  >
+            <li routerLinkActive="active"><a *ngIf="identity" href='#!'  [routerLink]="['/admin-panel']"><i class="material-icons">backup</i></a></li>
+            <li><a *ngIf="identity" class="dropdown-item" href='#!'  [routerLink]="['/mis-datos']"><i class="material-icons">account_box</i></a></li>
+            <li><a *ngIf="identity" (click)="logout()" href='#!'  ><i class="material-icons">exit_to_app</i></a></li>
+          </ul>
+
+    <ul class="sidenav sidenav-close" id="mobile-demo">
+      <li routerLinkActive="active"><a  href="home" >Inicio</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['we']">Nosotros</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['fotos']">Fotografias</a></li>
+      <!-- <li routerLinkActive="active"><a [routerLink]="['manager']" >Manager</a></li> -->
+      <li routerLinkActive="active"><a [routerLink]="['contacto']" >Contactanos</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['songs/','5c35f3b85d2dd22ea4dc53a7']" >Musica</a></li>
+      <!-- <li routerLinkActive="active"><a [routerLink]="['movies']" >Videos</a></li> -->
+
+      <li routerLinkActive="active" *ngIf="!identity" ><a [routerLink]="['login']" >Login</a></li>
+      <li *ngIf="identity" class="session">
+          <div class="identity">
+              <b>  {{identity?.name}}</b>
+              <li routerLinkActive="active"><a *ngIf="identity" href='#!'  [routerLink]="['/admin-panel']"><i class="material-icons">backup</i></a></li>
+              <li><a class="dropdown-item" href='#!'  [routerLink]="['/mis-datos']"><i class="material-icons">account_box</i></a></li>
+              <li><a (click)="logout()" href='#!'  ><i class="material-icons">exit_to_app</i></a></li>
+          </div>
+       </li>
+    </ul>
+
+
+  <router-outlet>
+  </router-outlet>
+
+
+
+
+  <div class="central col s11 m11">
+      <player class="player"></player>
+  </div>
+  <app-footer></app-footer>

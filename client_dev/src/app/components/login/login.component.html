@@ -1,0 +1,32 @@
+<div class="row img-bacground">
+    <div class="col s12 l12 m12 margen">
+      <div class="card">
+        <div class="card-content white">
+          <div class="row">
+            <span class="card-title">Login</span>
+              <form class="col s12 " #loginForm="ngForm" (keydown.enter)="$event.preventDefault()"  (ngSubmit)="onSubmit(loginForm)" >
+                <div class="row" >
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate" name="email" #email="ngModel" [(ngModel)]="user.email" required>
+                    <label for="email">Email</label>
+                    <span *ngIf="!email.valid  && email.touched" > Email es obligatorio</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate" name="password" #password="ngModel" [(ngModel)]="user.password" >
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="card-action col s12">
+                  <div class="input-field col s12 l12">
+                  <a routerLink="/register" routerLinkactive="active" ><button class="btn right">Registrate</button></a>
+                    <button class="btn" [disabled]="loginForm.invalid"   type="submit">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

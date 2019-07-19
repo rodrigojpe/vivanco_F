@@ -1,0 +1,37 @@
+<h4>{{title}}</h4>
+<div class="row col s12 m12">
+  <ul class="pagination">
+    <li class=""><a [routerLink]="['/admin-panel/list-artist/',prev_page]" routerLinkActive="active"><i class="material-icons">chevron_left</i></a></li>
+    <li class="" *ngFor="let i of artists; let x = index;" routerLinkActive="active"><a [routerLink]="['/admin-panel/list-artist/', x+1]" >{{x+1}}</a></li>
+    <li class="waves-effect active"><a [routerLink]="['/admin-panel/list-artist/',next_page]" routerLinkActive="active"><i class="material-icons" >chevron_right</i></a></li>
+  </ul>
+  <div *ngFor="let artists of artists" class="col s4 m4 margen ">
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper col s12 m12">
+            <div class="col s12 m12">
+                <div class="col s12 m12" *ngIf="artists?.image && artists?.image != 'null'">
+                  <img src="{{url + 'upload-img-artist/' + artists?.image }}" alt="" class="img_artis"> <!-- notice the "circle" class -->
+                </div>
+                <div class="col s12 m12 ">
+                  <a class="color" [routerLink]="['/admin-panel/artist/', artists._id]" routerLinkActive="active">
+                    {{artists.name}}
+                  </a>
+                </div>
+                <div class="col s12 m12 ">
+                  <div class="col s4 m4">
+                    <a  class="col s3 m3" [routerLink]="['/admin-panel/artist-edit/', artists._id]" class="btn" routerLinkActive="active"><i class="material-icons">mode_edit</i></a>
+                  </div>
+                  <div class="col s4 m4 btn_delete"   >
+                    <a class="col s2 m2" (click)="onDeleteArtist(artists._id)"  class="btn waves-light red" routerLinkActive="active"><i class="material-icons">delete_forever</i></a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div *ngIf="identity && identity.role == 'ROLE_ADMIN'" class="btn waves-effect waves-light col m12">
+    <a  [routerLink]= "['/admin-panel/artist-add']" class="btn" routerLinkActive="active" ><i class="material-icons">person_add</i> Anadir un Artista</a>
+  </div>
+
+
+</div>

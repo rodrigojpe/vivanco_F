@@ -1,0 +1,57 @@
+.margen{
+  /* margin-left: 20rem !important; */
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+}
+
+
+.img-bacground {
+  padding-top: 7rem;
+  background-image: url('https://files.greatermedia.com/uploads/sites/21/2016/01/concert-audience.jpg');
+  background-size: 100% 100%;
+  /* background-color: black; */
+  flex: auto;
+  display: flex;
+  margin: 0 auto;
+}
+
+.grey {
+    /* background-color: black !important; */
+    background-image: 'assets/img/background.jpg' ;
+    flex: auto;
+}
+app-login{
+  height: 100%;
+
+}
+
+.row{
+  margin-bottom: 0px !important;
+}
+
+.card .card-content{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  flex: auto;
+  align-items: center;
+   position: relative;
+
+}
+form{
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60) !important;
+}
+
+span{
+  color: black;
+}
+/* .card-title{
+  margin: 0 auto;
+  display: flex !important;
+
+} */

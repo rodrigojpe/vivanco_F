@@ -1,0 +1,51 @@
+
+.row .col.m12 {
+  height: 100%;
+  margin-top: 0 ;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.img_artis img{
+  width: 40rem;
+  margin-left: 1rem;
+  height:20rem;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card-sub{
+  margin-left: 98px !important;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.card-panel{
+  margin-left: 1.5rem;
+  width: 90%;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+
+}
+.cont-table{
+  margin-left: 9rem;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+
+}
+
+ .fila .aviso h1{
+  margin-top: 4rem !important;
+  margin-left: 4rem;
+}
