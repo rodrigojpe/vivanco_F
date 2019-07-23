@@ -49,7 +49,7 @@ app.use(bodyParser.json());
 
 // rutas
 // app.use('/', contactRouter);
-app.use(express.static(path.join('vivancoBand')));
+app.use(express.static(path.join('client')));
 app.use('/', user_router);
 app.use('/', album_router);
 app.use('/', song_router);
