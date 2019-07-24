@@ -15,7 +15,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" class="icon" href="../assets/img/favicon.ico">
-<link rel="stylesheet" href="styles.c7a211fa6d182ed98c47.css"></head>
+<link rel="stylesheet" href="styles.283d7f9dd1826dea961d.css"></head>
 <body class="color style=background-color:#f6f6f6">
   <app-root></app-root>
   <script type="text/javascript"  src="assets/instafeed.js"></script>
@@ -29,7 +29,7 @@
   <script type="text/javascript" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1"></script>
   <script type="text/javascript" src="assets/alert/sweetalert2.min.js"></script>
 
-<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.e3633a42d1123afc5fc9.js"></script><script type="text/javascript" src="scripts.c4edb24e844fe86e89c7.js"></script><script type="text/javascript" src="main.7c68bb8bd50cf6eac7ad.js"></script></body>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.e3633a42d1123afc5fc9.js"></script><script type="text/javascript" src="scripts.c4edb24e844fe86e89c7.js"></script><script type="text/javascript" src="main.f16b2fb3d2dcaf73f15a.js"></script></body>
 
 
 <script type="text/javascript">
@@ -56,25 +56,22 @@ $(document).ready(function(){
   setInterval(() => {
     $('.carousel').carousel('next');
   }, 4000)
-  
+
  console.log("entro");
 
-  $('.datepicker').datepicker({
-            firstDay: true,
-            format: 'yyyy/mm/dd',
-            i18n: {
-                months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-                monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
-                weekdays: ["Domingo","Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
-                weekdaysShort: ["Dom","Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
-                weekdaysAbbrev: ["D","L", "M", "M", "J", "V", "S"]
-            }
-        });
+  // $('.datepicker').datepicker({
+  //           firstDay: true,
+  //           format: 'yyyy/mm/dd',
+  //           i18n: {
+  //               months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+  //               monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
+  //               weekdays: ["Domingo","Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+  //               weekdaysShort: ["Dom","Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+  //               weekdaysAbbrev: ["D","L", "M", "M", "J", "V", "S"]
+  //           }
+  //       });
 
 });
-
-
-
 
 
 var userFeed = new Instafeed({
@@ -83,7 +80,7 @@ var userFeed = new Instafeed({
  clientId: '73a4ea047e0f43eeb09ec9be38d9147d',//'acces token you get form registering the app with instagram',
  accessToken:'10163453082.73a4ea0.d4ff25b73f0a4db2bf67b3801baba80f',
  resolution: 'low_resolution',
- template: '<a href="{{link}}" id="{{id}}"> <p>{{caption}} - {{orientation}} - {{model}} </p> <img src="{{image}}"/><span>{{likes}} - {{comments}} {{orientation}} </span></a>',
+ template: '<a href="{{link}}" id="{{id}}">  <img src="{{image}}"/> <span> {{likes}} - {{comments}} </span></a>',
  sortBy: 'none',
  limit: 4,
  tagName:'tagged',

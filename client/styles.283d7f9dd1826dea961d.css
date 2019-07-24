@@ -9,7 +9,7 @@
  * Copyright 2014 Alfiana E. Sibuea and other contributors
  * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE
- */.input-field>input[type=date]:not(.browser-default)+label,.input-field>input[type=time]:not(.browser-default)+label,.input-field>input[type]:-webkit-autofill:not(.browser-default):not([type=search])+label{-webkit-transform:translateY(-14px) scale(.8);transform:translateY(-14px) scale(.8);-webkit-transform-origin:0 0;transform-origin:0 0}.color-song{color:#f6f6f6!important}.logo{width:90px!important;height:45px!important}.edit{margin-top:4rem!important;padding-bottom:5px}/*!
+ */.input-field>input[type=date]:not(.browser-default)+label,.input-field>input[type=time]:not(.browser-default)+label,.input-field>input[type]:-webkit-autofill:not(.browser-default):not([type=search])+label{-webkit-transform:translateY(-14px) scale(.8);transform:translateY(-14px) scale(.8);-webkit-transform-origin:0 0;transform-origin:0 0}.color-song{color:#f6f6f6!important}.logo{width:119px!important;height:51px!important}.edit{margin-top:4rem!important;padding-bottom:5px}/*!
  * Materialize v1.0.0-rc.2 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)

@@ -15,7 +15,7 @@ let  md_upload = multipart({uploadDir: './uploads/songs'});
 
 api.get('/song/:id',md_auth.ensureAuth, songController.getSong);
 api.post('/song',md_auth.ensureAuth, songController.saveCancion);
-api.get('/songs/:album?',md_auth.ensureAuth, songController.getSongs);
+api.get('/songs/:album?', songController.getSongs);
 
 // api.post('/login', UserController.login);
 api.put('/update/:id',md_auth.ensureAuth,  songController.updateSong);
