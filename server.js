@@ -49,15 +49,15 @@ app.use(bodyParser.json());
 
 // rutas
 // app.use('/', contactRouter);
-app.use('/', express.static('client', {redirect:false}));
+app.use('/', express.static('client', { redirect:false}));
 app.use('/', user_router);
 app.use('/', album_router);
 app.use('/', song_router);
 app.use('/', artist_route);
 app.use('/', contact);
 
-app.get('*', function(req, res){
-    res.sendFile(__dirname + '/client/index.html');
+app.get('*', function(req, res, next){
+    res.sendFile(path.resolve('client/index.html'));
 });
 
 module.exports = app;
