@@ -162,6 +162,9 @@ await  Album.findByIdAndRemove(albumId, (err, albumRemove) =>{
 
 albumCtrl.getImagen = async(req,res) =>{
   var imageFile= req.params.imageFile;
+  console.log('get imagen' , imageFile);
+
+
   var path_file = './uploads/albums/'+imageFile;
   fs.exists(path_file, (exists)=>{
     if (path_file) {
@@ -179,7 +182,7 @@ albumCtrl.uploadImage = async(req, res ) =>{
 var albumID = req.params.id;
 var file_name = "no subido..";
 
-// console.log(userID);
+ console.log(userID);
 // return;
 
  if  (req.files) {
