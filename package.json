@@ -20,7 +20,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "http-errors": "^1.7.0",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "jwt-simple": "^0.5.1",
     "localStorage": "^1.0.4",
     "moment": "^2.22.2",
